@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <h1>Welcome to Iris Predictor</h1>
+    <form action="{{ url_for('home')}}" method="POST">
+        <label for="algorithm">Choose algorithm:</label>
+        <select id="algorithm" name="algorithm">
+            <option value="decision_tree">Decision Tree</option>
+            <option value="neural_network">Neural Network</option>
+        </select><br><br>
+        <button type="submit">Train Model</button>
+    </form>
+</body>
+</html>

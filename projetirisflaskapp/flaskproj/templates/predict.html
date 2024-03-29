@@ -1,0 +1,33 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predict</title>
+</head>
+<body>
+    <h1>Predict Iris Flower Type</h1>
+    <!-- Afficher l'exactitude du modèle si elle est disponible -->
+    {% if accuracy_decision_tree %}
+    <p>Accuracy of Decision Tree: {{ accuracy_decision_tree }}</p>
+    {% endif %}
+    {% if accuracy_neural_network %}
+    <p>Accuracy of Neural Network: {{ accuracy_neural_network }}</p>
+    {% endif %}
+    <!-- Formulaire pour saisir les caractéristiques à prédire -->
+    <form action="{{url_for('predict')}}" method="POST">
+        <input type = "text" value={{selected_algorithm}} name="selected_algorithm" hidden/>
+        <label for="feature1">Sepal Length:</label>
+        <input type="text" id="feature1" name="feature1"><br><br>
+        <label for="feature2">Sepal Width:</label>
+        <input type="text" id="feature2" name="feature2"><br><br>
+        <label for="feature3">Petal Length:</label>
+        <input type="text" id="feature3" name="feature3"><br><br>
+        <label for="feature4">Petal Width:</label>
+        <input type="text" id="feature4" name="feature4"><br><br>
+        <button type="submit">Predict</button>
+    </form>
+</body>
+</html>
