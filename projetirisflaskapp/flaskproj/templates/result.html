@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Result</title>
-</head>
-<body>
-    <h1>Prediction Result</h1>
-    <p>The predicted Iris flower type is: {{ predicted_class }}</p>
-    <h3> return page <a href="{{url_for('home')}}">home</a>. </h3> 
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Result</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='indexstyle.css') }}">
+    </head>
+    <body>
+        <div class="form_index">
+            <h1>Prediction Result</h1>
+            <p>The predicted Iris flower type is: {{ predicted_class }}</p>
+            <h3> return page <a href="{{url_for('home')}}">home</a>. </h3> 
+        </div>
+    </body>
 </html>

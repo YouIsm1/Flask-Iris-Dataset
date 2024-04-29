@@ -1,0 +1,15 @@
+*{
+    box-sizing: border-box;
+}
+
+.form_index{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 10px auto;
+    background-color: whitesmoke;
+    border-radius: 20px;
+    flex-direction: column;
+    width: 500px;
+}
